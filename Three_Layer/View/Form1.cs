@@ -109,7 +109,7 @@ namespace Three_Layer.View
             if (e.Button == MouseButtons.Right)
             {
                 ContextMenu m = new ContextMenu();
-                m.MenuItems.Add(new MenuItem("Cut"));
+                m.MenuItems.Add(new MenuItem("Delete", deleteBt_Click));
                 m.MenuItems.Add(new MenuItem("Copy"));
                 m.MenuItems.Add(new MenuItem("Paste"));
 
@@ -121,9 +121,9 @@ namespace Three_Layer.View
                 }
 
                 m.Show(dataGridView1, new Point(e.X, e.Y));
-
             }
         }
+        
     }
 }
 
